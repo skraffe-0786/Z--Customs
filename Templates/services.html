@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> V Services</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'services.css' %}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+    <header class="nav_bar">
+        <a href="#" class="logo">
+            <img src="{% static 'logo.jpeg' %}" class="web_logo">
+        </a>
+        <nav>
+            <a href="http://127.0.0.1:8000/Homepage">HOME</a>
+            <a href="http://127.0.0.1:8000/Service-Page">SERVICES</a>
+            <a href="">OUR WORK</a>
+            <a href="http://127.0.0.1:8000/About">ABOUT</a>
+            <a href="http://127.0.0.1:8000/ContactPage">CONTACT</a>
+        </nav>
+        <i class="bi bi-search" id="serach"></i>
+        <a href="http://127.0.0.1:8000/BookNow" class="btn"> BOOK NOW ↗</a>
+    </header>
+</head>
+
+<body>
+    <section class="top">
+        <div class="left-content">
+            <p class="eye">
+                HOME / SERVICES
+            </p>
+            <h1 class="head">
+                OUR
+                <span>SERVICES</span>
+            </h1>
+            <p class="eyebrow">
+                PREMIUM MODIFICATION | PROFESSIONAL DETAILING | CUSTOM BUILDS
+            </p>
+            <p class="text">
+                From performance upgrades to flawless detailing we offer a complete range of services to keep your ride
+                looking and performance at its best.
+            </p>
+            <a href="http://127.0.0.1:8000/Service-Page" class="service_btn">
+                EXPLORE OUR SERVICES →
+            </a>
+        </div>
+    </section>
+    <section class="Our">
+        <div class="our_services">
+            <p class="ser">OUR SERVICES</p>
+            <h1 class="heading">WHAT WE OFFER</h1>
+            <p class="small_text">Expect care for your car and bike - inside and out </p>
+        </div>
+        <p class="right">
+            | CUSTOM SOLUTIONS / PREMIUM QUALITY / PASSION DRIVEN
+        </p>
+    </section>
+    <section class="service_grids">
+
+        <div class="cards">
+            <img src="{% static 'porsche.jpg' %}" alt="Car modification" class="images">
+
+
+            <div class="service-content">
+                <i class="bi bi-tools service-icon"></i>
+                <h4 class="details">CAR MODIFICATION</h4>
+                <p class="deat">Body Kits and more</p>
+            </div>
+
+            <a href="#" class="card-arrow">
+                <i class="bi bi-arrow-right"></i>
+            </a>
+        </div>
+        <div class="cards">
+            <img src="{% static 'z900.jpg' %}" alt="Car modification" class="img">
+
+            <div class="service-content">
+                <i class="bi  bi-bicycle service-icon"></i>
+                <h4 class="details">BIKE MODIFICATION</h4>
+                <p class="deat">Custom parts,Suspension and styling</p>
+            </div>
+
+            <a href="#" class="card-arrow">
+                <i class="bi bi-arrow-right"></i>
+            </a>
+        </div>
+        <div class="cards">
+            <img src="{% static 'detailing.jpg' %}" alt="Car modification">
+
+            <div class="service-content">
+                <i class="bi bi-stars service-icon"></i>
+                <h4 class="details">DETAILING</h4>
+                <p class="deat">Ceramic coating,paint protection,intenior & exterior detailing</p>
+            </div>
+
+            <a href="#" class="card-arrow">
+                <i class="bi bi-arrow-right"></i>
+            </a>
+        </div>
+        <div class="cards">
+            <img src="{% static 'wheels.jpg' %}" alt="Car modification">
+
+            <div class="service-content">
+                <i class="bi bi-disc service-icon"></i>
+                <h4 class="details">WHEELS & TYRES</h4>
+                <p class="deat">Alloy wheels , premium tyres</p>
+            </div>
+
+            <a href="#" class="card-arrow">
+                <i class="bi bi-arrow-right"></i>
+            </a>
+        </div>
+        <div class="cards">
+            <img src="{% static 'custom.jpg' %}" alt="Car modification">
+
+            <div class="service-content">
+                <i class="bi bi-palette-fill service-icon"></i>
+                <h4 class="details">CUSTOM WRAPS & GRAPHICS</h4>
+                <p class="deat">unique design, PPF ,vinyl wraps and custom graphics</p>
+            </div>
+
+            <a href="#" class="card-arrow">
+                <i class="bi bi-arrow-right"></i>
+            </a>
+        </div>
+        <div class="cards">
+            <img src="{% static 'bmw.jpg' %}" alt="Car modification">
+
+            <div class="service-content">
+                <i class="bi bi-wrench-adjustable service-icon"></i>
+                <h4 class="details">CUSTOM BUILDS</h4>
+                <p class="deat">Build your dream ride with bespoke modification</p>
+            </div>
+
+            <a href="#" class="card-arrow">
+                <i class="bi bi-arrow-right"></i>
+            </a>
+        </div>
+
+
+
+
+    </section>
+    <section class="features">
+        <div class="feature">
+            <img src="{% static 'bull5.png' %}" class="feat">
+
+            <div class="features_service">
+                <h5 class="h5">FEATURED SERVICE</h5>
+                <H1 class="h1">CAR MODIFICATION</H1>
+                <p class="more">MORE POWER. BETTER CONTROL. BOLDER STYLE</p>
+                <p class="words">Take your car to the next level with our professional modification services.</p>
+                <p class="words"> We upgrade performance , enterance handling, and give your ride a unique look that
+                    stands out .</p>
+                <p class="bi bi-check-circle icon">DETAILING</p>
+                <p class="bi bi-check-circle icon">CUSTOM BUILDS</p>
+                <p class="bi bi-check-circle icon"> CUSTOM INTERIOR</p>
+                <button class="book_btn">BOOK NOW → </button>
+
+            </div>
+
+
+        </div>
+    </section>
+    <section class="process">
+        <h5 class="or">OUR PROCESS </h5>
+        <h1 class="how">HOW IT WORKS</h1>
+        <p class="letter">Getting your dream ride is simple. Just follow these 4 steps </p>
+        <div class="works">
+            <div class="const">
+                <i class="bi bi-chat-dots-fill ico"></i>
+                <h4>1.CONSULTATION</h4>
+                <p>Tell us your vision and get expect advice</p>
+            </div>
+            <div class="const">
+                <i class="bi bi-gear ico"></i>
+                <h4>2.CUSTOM PLAN</h4>
+                <p>We create a plan tallored to your needs</p>
+            </div>
+            <div class="const">
+                <i class="bi bi-tools ico"></i>
+                <h4>3.BUILD & MODIFY</h4>
+                <p>Our expect bring your ideas to life </p>
+            </div>
+            <div class="const">
+                <i class="bi bi-patch-check-fill ico"></i>
+                <h4>4.RIDE & ENJOY</h4>
+                <p>Your dream ride is ready . Time to hit thie road </p>
+            </div>
+        </div>
+    </section>
+    <section class="final_section">
+        <div class="finl">
+            <h5>READY TO UPGRADE ?</h5>
+            <h1>LET'S BUILD YOUR DREAM RIDE </h1>
+            <p>Get in touch with us today for a custom quote or consultation.</p>
+        </div>
+        <button class="get_quote">
+            GET A QUOTE →
+        </button>
+    </section>
+    <section class="footer">
+        <div class="footer_section">
+            <a href="#" class="logos">
+                <span>Z</span>CUSTOMS
+            </a>
+            <p class="letters">
+                CARS & BIKES MODIFICATION | DETAILING
+            </p>
+        </div>
+        <div class="foot">
+            <a href="#" class="bi bi-instagram service-icon"></a>
+        </div>
+        <div class="foot">
+            <a href="#" class="bi bi-youtube service-icon"></a>
+        </div>
+        <div class="foot">
+            <a href="#" class="bi bi-facebook service-icon"></a>
+        </div>
+        <div class="na">
+            CARS & BIKES
+        </div>
+        <div class="rightside">
+            <p class="side"> | DRIVE / MODIFY / DETAIL /REPEAT </p>
+        </div>
+    </section>
+
+
+
+</body>
+
+</html>

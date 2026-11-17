@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Z CUSTOMS | Cars & Bike Studio</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'contact.css' %}">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap" rel="stylesheet">
+
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+    <!-- Navigation bar -->
+    <header class="navbar">
+        <a href="#" class="logo">
+            <img src="{% static 'logo.jpeg' %}" class="web_logo">
+        </a>
+
+        <nav>
+            <a href="http://127.0.0.1:8000/Homepage">Home</a>
+            <a href="http://127.0.0.1:8000/Service-Page">Services</a>
+            <a href="">Our Work</a>
+            <a href="http://127.0.0.1:8000/About">About</a>
+            <a href="http://127.0.0.1:8000/ContactPage">Contact</a>
+        </nav>
+        <i class="bi bi-search" id="search"></i>
+        <a href="http://127.0.0.1:8000/BookNow" class="book-btn">Book Now ↗</a>
+    </header>
+</head>
+
+<body>
+
+
+    <section class="hero" id="home">
+        <div class="hero-content">
+            <p class="eyebrow">
+                HOME / CONTACT
+            </p>
+
+            <h1 class="brush ">
+                CONTACT
+                <span>US</span>
+            </h1>
+
+            <p class="hero-description">
+                LET'S TALK ABOUT YOUR NEXT PROJECT
+            </p>
+
+            <p class="hero-text">
+                Have a question, want a quote or ready to book your vehicle ? We'd love to hear from you . Reach out
+                to
+                us and let's bring your vision to life.
+            </p>
+
+            <a href="#services" class="primary-btn">
+                GET A QUOTE →
+            </a>
+        </div>
+
+    </section>
+    <section class="contact-info">
+        <div class="info">
+            <i class="bi  bi-telephone-fill"></i>
+            <h3>CALL US </h3>
+            <p>+91 6305178891</p>
+            <p>Mon-Sat: 9:00 AM - 8:00 PM</p>
+        </div>
+        <div class="info">
+            <i class="bi bi-envelope"></i>
+            <h3>EMAIL US</h3>
+            <p>skraffe446@gmail.com</p>
+            <p>We reply within 24 hours</p>
+        </div>
+        <div class="info">
+            <i class="bi bi-geo-alt-fill"></i>
+            <h3>VISIT US</h3>
+            <p>123 auto street, Green park</p>
+            <p>Andhra Pradesh,53000.</p>
+        </div>
+        <div class="info">
+            <i class="bi bi-clock-fill"></i>
+            <h3>WORKING HOURS</h3>
+            <p>Mon-Sat: 9:00 AM - 8:00 PM</p>
+            <p>Sunday : Closed</p>
+        </div>
+    </section>
+    <section class="details">
+        <div class="deat">
+            <h5>SEND US A MESSAGE</h5>
+            <h1>GET IN TOUCH</h1>
+            <p>Fill out the form below and we'll get back to you as soon as possible.</p>
+            <form method="POST" action="{% url 'contact' %}">
+                {% csrf_token %}
+
+                {% if form.errors %}
+                <p class="error-message">
+                    Please correct the errors below.
+                </p>
+                {% endif %}
+
+                <div class="input_box">
+                    <i class="bi bi-person"></i>
+                    <input type="text" name="name" placeholder="Your Name" value="{{ form.name.value|default:''}}">
+                </div>
+                {{ form.name.errors }}
+
+                <div class="input_box">
+                    <i class="bi bi-envelope"></i>
+                    <input type="email" name="email" placeholder="Your Email" value="{{form.email.value|default:''}}">
+                </div>
+                {{form.email.errors}}
+
+                <div class="input_box">
+                    <i class="bi bi-telephone"></i>
+                    <input type="number" name="phone" placeholder="Phone Number" value="{{form.phone.value|default:''}}">
+                </div>
+                {{form.phone.errors}}
+
+                <p>SERVICES INTRESTED</p>
+                <div class="input-box">
+                    <i class="bi bi-tools"></i>
+
+                    <select name="service" required>
+                        <option value="" disabled selected>Select a Service</option>
+                        <option value="Car Detailing">Car Detailing</option>
+                        <option value="Bike Detailing">Bike Detailing</option>
+                        <option value="Wheel & Tyres">Wheel & Tyres</option>
+                        <option value="Custom Wraps & Graphics">Custom Wraps & Graphics</option>
+                        <option value="Custom Builds">Custom Builds</option>
+                        <option value="Performance Upgrades">Performance Upgrades</option>
+                    </select>
+
+                    <i class="bi bi-chevron-down dropdown-icon"></i>
+                </div>
+                {{form.service.errors}}
+                <div class="input_box">
+                    <i class="bi bi-chat-left-text" id="chat"></i>
+                    <input type="tel" name="message" placeholder="MESSAGE" class="int">
+                </div>
+                {{form.message.errors}}
+                <button class="send_btn">
+                    SEND MESSAGE
+                </button>
+        </div>
+        <div class="customs">
+            <img src="{% static 'ZCustoms.png' %}">
+        </div>
+
+    </section>
+    <section class="quote">
+        <img src="{% static 'lifestyle.png'  %}" class="quote_img">
+        <div class="quote_section">
+            <h4>HAVE A QUESTION ?</h4>
+            <P class="head">WE'RE HERE TO HELP</P>
+            <P class="text">
+                Get in touch today and let's make your dream ride a reality
+            </P>
+
+        </div>
+        <div class="right">
+            <p class="right_text">LET'S BUILD YOUR DREAM RIDE</p>
+            <button class="quote_btn">GET A QUOTE →</button>
+        </div>
+    </section>
+    <section class="footer">
+        <div class="footer_section">
+            <a href="#" class="logos">
+                <span>Z</span>CUSTOMS
+            </a>
+            <p class="letters">
+                CARS & BIKES MODIFICATION | DETAILING
+            </p>
+        </div>
+        <div class="foot">
+            <a href="#" class="bi bi-instagram service-icon"></a>
+        </div>
+        <div class="foot">
+            <a href="#" class="bi bi-youtube service-icon"></a>
+        </div>
+        <div class="foot">
+            <a href="#" class="bi bi-facebook service-icon"></a>
+        </div>
+        <div class="na">
+            CARS & BIKES
+        </div>
+        <div class="rightside">
+            <p class="side"> | DRIVE / MODIFY / DETAIL /REPEAT </p>
+        </div>
+    </section>
+    </form>
+</body>
+
+</html>

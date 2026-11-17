@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Z CUSTOMS | Cars & Bike Studio</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'our.css' %}">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap" rel="stylesheet">
+
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+    <!-- Navigation bar -->
+    <header class="navbar">
+        <a href="#" class="logo">
+            <img src="{% static 'logo.jpeg' %}" class="web_logo">
+        </a>
+
+        <nav>
+            <a href="http://127.0.0.1:8000/Homepage">Home</a>
+            <a href="http://127.0.0.1:8000/Service-Page">Services</a>
+            <a href="http://127.0.0.1:8000/About">Our Work</a>
+            <a href="#about">About</a>
+            <a href="http://127.0.0.1:8000/ContactPage">Contact</a>
+        </nav>
+        <i class="bi bi-search" id="search"></i>
+        <button class="book-btn">Book Now ↗</button>
+    </header>
+</head>
+<body>
+    <section class="hero" id="home">
+        <div class="hero-content">
+            <p class="eyebrow">
+                HOME / ABOUT
+            </p>
+
+            <h1 class="brush ">
+                ABOUT
+                <span>US</span>
+            </h1>
+
+            <p class="hero-description">
+                CARS & BIKES | PASSION | PRECISION | PERFORMANCE
+            </p>
+
+            <p class="hero-text">
+                At Z Customs, we are  more than  just a garage. we are a community of enthusiests, creators and innovators who live and  breathe cars and bikes 
+            </p>
+
+            <a href="http://127.0.0.1:8000/Service-Page" class="primary-btn">
+                OUR SERVICES →
+            </a>
+        </div>
+
+    </section>
+    <section class="our">
+        <div class="story">
+            <img src="{% static 'bull5.png' %} " id="lo">
+        </div>
+        <div class="our_story">
+            <h5>OUR STORY</h5>
+            <h1>BUILT FROM PASSION</h1>
+            <p>Z CUSTOMS  waas founded by a group of car & bike enthusiasts
+                with a shared dream - to create a space  where Performance, style and  Quality come together. What started as a small passion project has now grown into a trusted name in  modification and detailing.
+            </p>
+            <p class="leter">We believe every vehicle has a story, and we're here to  make yours extraordinary.</p>
+        </div>
+        <div class=""></div>
+    </section>
+    <section class="quote">
+        <div class="quote_section">
+            <h4>WHY CHOOSE Z CUSTOMS ?</h4>
+            <P class="head">QUALITY / EXPERTISE /TRUST</P>
+            <P class="text">
+                We use premium product, advance techniques and a skilled  team  to deliver results that
+                exceed expetations. your vehicle is in safe hands with  us.
+            </P>
+            
+            <button class="quote_btn">LEARN MORE →</button>
+        </div>
+        <img src="{% static 'z900.jpg'  %}" class="quote_img">
+       
+    </section>
+    <section class="vision">
+        <div class="vis">
+            <h4>OUR VISION</h4>
+            <h1>A STRONGER COMMUINTY</h1>
+            <p>We aim to build a community of rider and drivers who share the same passion.
+                Through our work we don't just modify vehicle - we build relationships.
+                create experiences and keep the culture alive.
+            </p>
+            <a href="#" class="as">JOIN OUR JOURNEY →</a>
+        </div>
+    </section>
+    <section class="footer">
+        <div class="footer_section">
+            <a href="#" class="logos">
+                <span>Z</span>CUSTOMS
+            </a>
+            <p class="letters">
+                CARS & BIKES MODIFICATION | DETAILING
+            </p>
+        </div>
+        <div class="foot">
+            <a href="#" class="bi bi-instagram service-icon"></a>
+        </div>
+        <div class="foot">
+            <a href="#" class="bi bi-youtube service-icon"></a>
+        </div>
+        <div class="foot">
+            <a href="#" class="bi bi-facebook service-icon"></a>
+        </div>
+        <div class="na">
+            CARS & BIKES
+        </div>
+        <div class="rightside">
+            <p class="side"> | DRIVE / MODIFY / DETAIL /REPEAT </p>
+        </div>
+    </section>
+
+</body>
+</html>

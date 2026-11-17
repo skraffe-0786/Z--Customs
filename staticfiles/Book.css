@@ -1,0 +1,758 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700;800&display=swap');
+
+:root {
+    --black: #050705;
+    --dark: #0b100c;
+    --green: #39ff14;
+    --white: #f5f7f5;
+    --grey: #a4ada5;
+}
+
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body {
+
+    background: var(--black);
+    color: var(--white);
+    font-family: 'Inter', sans-serif;
+    line-height: 1.6;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.navbar {
+    width: 100%;
+    min-height: 76px;
+    padding: 19px 3%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 35px;
+    background: rgba(5, 7, 5, 0.96);
+    border-bottom: 1px solid #243026;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+
+}
+
+
+.web_logo{
+    width: 100%;
+    height: 175px;
+    overflow: hidden;
+}
+
+
+
+.navbar nav {
+    display: flex;
+    align-items: center;
+    gap: 100px;
+    font-size: 30px;
+}
+
+.navbar nav a {
+    color: #d4dbd4;
+    font-size: 14px;
+    font-weight: 700;
+    text-transform: uppercase;
+    transition: color 0.3s ease;
+}
+
+.navbar nav a:hover {
+    color: var(--green);
+
+}
+
+.book-btn {
+    padding: 15px 20px;
+    font-size: 14px;
+    font-weight: 700;
+    border: 1px solid var(--green);
+    text-transform: uppercase;
+    transition: color 0.3s ease;
+}
+
+.book-btn:hover {
+    background-color: var(--green);
+    color: var(--black);
+    box-shadow: 0 0 20px #39ff1444;
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+.logos {
+
+    font-family: 'orbitron', sans-serif;
+    font-weight: 700;
+    letter-spacing: 1px;
+    white-space: nowrap;
+    font-size: 25px;
+}
+
+.logos span {
+    color: var(--green);
+    font-size: 36px;
+    margin-right: 6px;
+}
+
+.hero {
+    min-height: 500px;
+    display: flex;
+    align-items: center;
+    padding: 70px 6%;
+    position: relative;
+    overflow: hidden;
+    background: linear-gradient(90deg,
+            rgba(3, 6, 4, 0.85)0%,
+            rgba(3, 6, 4, 0.45) 38%,
+            rgba(3, 6, 4, 0.05) 100%),
+        url("ZCustoms.png") center 30% / cover no-repeat;
+    border-bottom: 1px solid #244326;
+    margin-bottom: 25px;
+}
+
+.hero-content {
+    max-width: 650px;
+    position: relative;
+    z-index: 1;
+}
+
+.eyebrow {
+    color: var(--green);
+    font-size: 14px;
+    font-weight: 800;
+    letter-spacing: 4px;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+}
+
+.hero h1 {
+    font-family: 'orbitron', sans-serif;
+    font-size: clamp(34px, 5vw, 64px);
+    font-weight: 800;
+    letter-spacing: -2px;
+    margin-bottom: 20px;
+    line-height: 1.15;
+}
+
+.hero h1 span {
+    color: var(--green);
+    display: block;
+    text-shadow: 0 0 25px #39ff14;
+}
+
+.hero-description {
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    margin-bottom: 15px;
+}
+
+.hero-text {
+    min-width: 430px;
+    width: 100%;
+    color: #c1c9c1;
+    font-size: 14px;
+    margin-bottom: 28px;
+}
+.brush {
+    font-family: 'Permanent Marker', cursive;
+    font-size: clamp(0rem, 100vw, 10.5rem);
+    font-weight: 900;
+    text-transform: uppercase;
+    font-style: italic;
+    line-height: 0.95;
+    color: #f5f5f5;
+    transform: rotate(-2deg);
+    text-shadow: 2px 2px 0 #111;
+}
+
+.brush span {
+    display: block;
+    color: #39ff14;
+    margin-top: 1px;
+   
+    font-family: 'Permanent Marker',sans-serif;
+    letter-spacing: 2px;
+    font-size: 175%;
+}
+
+
+/* ================================
+   BOOKING SECTION
+================================ */
+
+.booking-content {
+    width: 100%;
+    padding: 15px 4.5% 25px;
+    box-sizing: border-box;
+
+    display: grid;
+    grid-template-columns: minmax(0, 2fr) minmax(0, 1.1fr);
+    align-items: start;
+    gap: 14px;
+
+    background: #020706;
+    color: #f5f7f6;
+
+    font-family: Arial, sans-serif;
+}
+
+/* Prevent grid overflow */
+.booking-content *,
+.booking-content *::before,
+.booking-content *::after {
+    box-sizing: border-box;
+}
+
+.booking-content .booking-form,
+.booking-content .booking-side {
+    min-width: 0;
+}
+
+/* ================================
+   LEFT: BOOKING FORM
+================================ */
+
+.booking-content .booking-form {
+    padding: 24px 22px;
+    border: 1px solid #174536;
+    border-radius: 9px;
+
+    background: linear-gradient(
+        145deg,
+        #04100d,
+        #020807
+    );
+}
+
+/* Heading */
+
+.booking-content .form-heading {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    margin-bottom: 0;
+}
+
+.booking-content .form-heading > i {
+    color: #60ff00;
+    font-size: 32px;
+    flex-shrink: 0;
+}
+
+.booking-content .form-heading h5 {
+    color: #60ff00;
+    font-size: 11px;
+    letter-spacing: 1px;
+    font-weight: 700;
+    margin: 0 0 6px;
+}
+
+.booking-content .form-heading h2 {
+    color: #f5f7f6;
+    font-size: clamp(20px, 2vw, 26px);
+    font-style: italic;
+    font-weight: 800;
+    line-height: 1.2;
+    margin: 0;
+}
+
+.booking-content .form-desc {
+    color: #c2d2cc;
+    font-size: 13px;
+    line-height: 1.7;
+    margin: 10px 0 18px;
+}
+
+/* ================================
+   FORM GRID
+================================ */
+
+.booking-content .form-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 15px 20px;
+    width: 100%;
+}
+
+/* Input boxes */
+
+.booking-content .field,
+.booking-content .vehicle-field {
+    min-width: 0;
+    min-height: 51px;
+    padding: 9px 12px;
+
+    display: flex;
+    align-items: center;
+    gap: 12px;
+
+    border: 1px solid #18513f;
+    border-radius: 6px;
+    background: rgba(0, 15, 11, 0.65);
+
+    transition: border-color 0.25s,
+                box-shadow 0.25s;
+}
+
+.booking-content .field:focus-within,
+.booking-content .vehicle-field:focus-within {
+    border-color: #60ff00;
+    box-shadow: 0 0 0 2px rgba(96, 255, 0, 0.08);
+}
+
+/* Field icons */
+
+.booking-content .field > i,
+.booking-content .vehicle-field > i {
+    color: #60ff00;
+    font-size: 23px;
+    flex-shrink: 0;
+}
+
+/* Inner field content */
+
+.booking-content .field-content {
+    flex: 1;
+    min-width: 0;
+}
+
+.booking-content .field-content > label {
+    display: block;
+    color: #dce9e4;
+    font-size: 11px;
+    line-height: 1.4;
+    margin: 0 0 4px;
+}
+
+/* Inputs, selects, textarea */
+
+.booking-content .field input:not([type="radio"]),
+.booking-content .field select,
+.booking-content .field textarea {
+    display: block;
+    width: 100%;
+    min-width: 0;
+
+    padding: 0;
+    margin: 0;
+
+    border: none;
+    outline: none;
+    border-radius: 0;
+
+    background: transparent;
+    color: #ffffff;
+
+    font-family: inherit;
+    font-size: 12px;
+    line-height: 1.5;
+}
+
+.booking-content .field input::placeholder,
+.booking-content .field textarea::placeholder {
+    color: #9db1a9;
+    opacity: 1;
+}
+
+.booking-content .field select {
+    cursor: pointer;
+}
+
+.booking-content .field select option {
+    background: #06120e;
+    color: #ffffff;
+}
+
+/* Date input */
+
+.booking-content .field input[type="date"] {
+    color-scheme: dark;
+    min-height: 18px;
+}
+
+/* Dropdown arrow */
+
+.booking-content .field > .bi-chevron-down {
+    font-size: 14px;
+    margin-left: auto;
+    flex-shrink: 0;
+}
+
+/* Vehicle selection */
+
+.booking-content .vehicle-options {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+}
+
+.booking-content .vehicle-options label {
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+
+    color: #f2f6f4;
+    font-size: 12px;
+    margin: 0;
+    cursor: pointer;
+}
+
+.booking-content .vehicle-options input[type="radio"] {
+    margin: 0;
+    accent-color: #60ff00;
+    cursor: pointer;
+}
+
+/* Full width fields */
+
+.booking-content .full-width {
+    grid-column: 1 / -1;
+}
+
+/* Message box */
+
+.booking-content .message-field {
+    align-items: flex-start;
+    min-height: 88px;
+}
+
+.booking-content .message-field > i {
+    margin-top: 3px;
+}
+
+.booking-content .field textarea {
+    min-height: 45px;
+    resize: vertical;
+}
+
+/* ================================
+   BOOK NOW BUTTON
+================================ */
+
+.booking-content .form-bottom {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    align-items: center;
+    gap: 22px;
+    margin-top: 18px;
+}
+
+.booking-content .form-bottom .book-btn {
+    width: 100%;
+    min-width: 0;
+    min-height: 50px;
+    padding: 12px 16px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+
+    border: 1px solid #60ff00;
+    border-radius: 6px;
+
+    background: #60ed13;
+    color: #041004;
+
+    font-size: 12px;
+    font-weight: 800;
+    font-family: inherit;
+    cursor: pointer;
+
+    transition: 0.25s ease;
+}
+
+.booking-content .form-bottom .book-btn:hover {
+    background: #83ff43;
+    box-shadow: 0 0 18px rgba(96, 255, 0, 0.18);
+    transform: translateY(-2px);
+}
+
+/* Privacy note */
+
+.booking-content .privacy-note {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    min-width: 0;
+}
+
+.booking-content .privacy-note > i {
+    color: #ffffff;
+    font-size: 23px;
+    flex-shrink: 0;
+}
+
+.booking-content .privacy-note p {
+    color: #c6d6cf;
+    font-size: 10px;
+    line-height: 1.7;
+    margin: 0;
+}
+
+/* ================================
+   RIGHT: WHY BOOK WITH US
+================================ */
+
+.booking-content .booking-side {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.booking-content .why-book {
+    padding: 23px 22px;
+
+    border: 1px solid #174536;
+    border-radius: 9px;
+
+    background: linear-gradient(
+        145deg,
+        #04100d,
+        #020807
+    );
+}
+
+.booking-content .why-book > h2 {
+    color: #f4f7f5;
+    font-size: clamp(18px, 1.7vw, 23px);
+    line-height: 1.3;
+    font-style: italic;
+    font-weight: 800;
+    margin: 0 0 13px;
+}
+
+.booking-content .why-book > h2 span {
+    color: #60ff00;
+}
+
+/* Benefit rows */
+
+.booking-content .benefit {
+    display: flex;
+    align-items: center;
+    gap: 17px;
+
+    padding: 13px 0;
+    border-bottom: 1px solid #173c32;
+}
+
+.booking-content .benefit:last-child {
+    border-bottom: none;
+    padding-bottom: 0;
+}
+
+.booking-content .benefit > i {
+    width: 52px;
+    flex-shrink: 0;
+
+    text-align: center;
+    color: #60ff00;
+    font-size: 38px;
+    line-height: 1.2;
+}
+
+.booking-content .benefit > div {
+    flex: 1;
+    min-width: 0;
+}
+
+.booking-content .benefit h4 {
+    color: #55ffda;
+    font-size: 11px;
+    font-weight: 700;
+    line-height: 1.4;
+    margin: 0 0 5px;
+}
+
+.booking-content .benefit p {
+    color: #c6d6cf;
+    font-size: 12px;
+    line-height: 1.6;
+    margin: 0;
+}
+
+/* ================================
+   PROMOTIONAL BANNER
+================================ */
+
+.booking-content .booking-banner {
+    position: relative;
+    isolation: isolate;
+
+    min-height: 150px;
+    padding: 20px 25px;
+
+    display: flex;
+    align-items: center;
+
+    overflow: hidden;
+    border: 1px solid #174536;
+    border-radius: 9px;
+
+    background:
+        linear-gradient(
+            90deg,
+            rgba(0, 8, 6, 0.96) 0%,
+            rgba(0, 8, 6, 0.72) 48%,
+            rgba(0, 8, 6, 0.10) 100%
+        ),
+        url("/static/ZCustoms.png") center / cover no-repeat;
+}
+
+.booking-content .banner-text {
+    position: relative;
+    z-index: 1;
+}
+
+.booking-content .banner-text h2 {
+    color: #60ff00;
+    font-family: "Permanent Marker", cursive;
+    font-size: 23px;
+    line-height: 1.15;
+    font-weight: 400;
+    font-style: italic;
+    margin: 0;
+    transform: rotate(-4deg);
+}
+
+.booking-content .banner-text span {
+    display: block;
+    width: 110px;
+    height: 3px;
+    background: #60ff00;
+    margin-top: 12px;
+    transform: rotate(-8deg);
+}
+
+/* ================================
+   RESPONSIVE TABLET
+================================ */
+
+@media (max-width: 1000px) {
+    .booking-content {
+        grid-template-columns: minmax(0, 1fr);
+        padding: 20px 4%;
+    }
+
+    .booking-content .booking-side {
+        display: grid;
+        grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+        align-items: stretch;
+    }
+
+    .booking-content .booking-banner {
+        min-height: 100%;
+    }
+}
+
+/* ================================
+   RESPONSIVE MOBILE
+================================ */
+
+@media (max-width: 600px) {
+    .booking-content {
+        padding: 18px 4%;
+        gap: 14px;
+    }
+
+    .booking-content .booking-form,
+    .booking-content .why-book {
+        padding: 18px 14px;
+    }
+
+    .booking-content .form-grid {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 12px;
+    }
+
+    .booking-content .full-width {
+        grid-column: auto;
+    }
+
+    .booking-content .form-bottom {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 16px;
+    }
+
+    .booking-content .booking-side {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .booking-content .booking-banner {
+        min-height: 170px;
+    }
+
+    .booking-content .form-heading {
+        gap: 12px;
+    }
+
+    .booking-content .form-heading > i {
+        font-size: 27px;
+    }
+
+    .booking-content .form-heading h2 {
+        font-size: 20px;
+    }
+
+    .booking-content .why-book > h2 {
+        font-size: 19px;
+    }
+}
+
+/* Smaller phones */
+@media (max-width: 360px) {
+    .booking-content .benefit {
+        gap: 10px;
+    }
+
+    .booking-content .benefit > i {
+        width: 40px;
+        font-size: 30px;
+    }
+}
+.footer{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    min-height: 100px;
+   padding: 20px 1%;
+   gap: 0%;
+   overflow: hidden;
+   isolation: isolate;
+}
+.rightside{
+    color: var(--green);
+    font-size: 14px;
+    
+}
+.na{
+    
+    color: var(--green);
+    padding: 10px;
+    font-size: 25px;
+    gap: 25%;
+   
+}
+.foot{
+    font-size: 25px;
+    color: var(--green);
+}
+.footer_section{
+    padding: 0px;
+    margin-right: 120px;
+}

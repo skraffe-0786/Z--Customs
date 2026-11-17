@@ -1,0 +1,470 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700;800&display=swap');
+
+:root {
+    --black: #050705;
+    --dark: #0b100c;
+    --green: #39ff14;
+    --white: #f5f7f5;
+    --grey: #a4ada5;
+}
+
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body {
+
+    background: var(--black);
+    color: var(--white);
+    font-family: 'Inter', sans-serif;
+    line-height: 1.6;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.nav_bar {
+    width: 100%;
+    min-height: 76px;
+    padding: 16px 3%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 25px;
+    background: rgba(5, 7, 5, 0.96);
+    border-bottom: 1px solid #243026;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+
+}
+
+.web_logo {
+    
+    overflow: hidden;
+    height: 175px;
+    width: 100%;
+}
+
+
+
+.nav_bar nav {
+    display: flex;
+    align-items: center;
+    gap: 100px;
+    font-size: 25px;
+}
+
+.nav_bar nav a {
+    color: #d4dbd4;
+    font-size: 14px;
+    font-weight: 700;
+    text-transform: uppercase;
+    transition: color 0.3s ease;
+}
+
+.nav_bar nav a:hover {
+    color: var(--green);
+
+}
+.btn{
+    padding: 15px 20px;
+    font-size: 14px;
+    font-weight: 700;
+    border: 1px solid #39ff14;
+    text-transform: uppercase;
+}
+.btn:hover{
+    color: var(--black);
+    background: var(--green);
+}
+.top{
+    min-height: 300px;
+    display: flex;
+    align-items: center;
+    padding: 25px 4%;
+    position: relative;
+    overflow: hidden;
+    background: linear-gradient(90deg,
+            rgba(3, 6, 4, 0.85)0%,
+            rgba(3, 6, 4, 0.45) 38%,
+            rgba(3, 6, 4, 0.05) 100%),
+        url("cars.png") center 55% / cover no-repeat;
+    border-bottom: 1px solid #244326;
+
+
+}
+.left-content{
+    min-width: 650px;
+    position: relative;
+    z-index: 1;
+}
+.eyebrow{
+    
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 2px;
+    margin-bottom: 30px;
+    text-transform: uppercase;
+}
+.top h1{
+    font-size:clamp(34px, 5vw, 64px) ;
+    font-weight: 800;
+    font-family: 'orbitron',sans-serif;
+    
+    margin-bottom: 1.15;
+}
+.top h1 span{
+    color: var(--green);
+    font-family: 'orbitron',sans-serif;
+    display: block;
+}
+.service_btn{
+    display: inline-block;
+    padding: 14px 24px ;
+    font-weight: 800;
+    color: var(--black);
+    font-size: 12px;
+    text-transform: uppercase;
+    transition: 0.3s ease;
+    background: var(--green);
+}
+.service_btn:hover{
+    transform: translateY(-3px);
+    box-shadow: 0 0 25px #39ff1466;
+}
+.head{
+    font-family: 'Permanent marker',cursive;
+    font-size: clamp(3rem,7vw,66.5rem);
+    font-weight: 400;
+    text-transform: uppercase;
+    font-style: italic;
+    transform: rotate(-2deg);
+    text-shadow: 2px 2px 0 #111;
+    margin-bottom: 10px;
+
+}
+.text{
+    margin-bottom: 20px;
+    width: 500px;
+    color: var(--grey);
+}
+.Our{
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    margin-left: 45px;
+}
+::-webkit-scrollbar{
+    scrollbar-width: none;
+}
+.ser{
+    color: var(--green);
+    font-size: 14px;
+}
+.heading{
+    font-style: italic;
+    font-size: 40px;
+}
+
+.service_grids {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 25px;
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px 0;
+}
+
+/* Individual service card */
+.cards {
+    position: relative;
+    overflow: hidden;
+    border: 1px solid #39ff14;
+    background: #0b100c;
+    border-radius: 10px;
+    min-width: 0;
+    height: 40vh;
+    padding-bottom: 55px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Card image */
+.cards img {
+    width: 100%;
+    height: 170px;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.4s ease;
+}
+
+/* Image hover effect */
+.cards:hover img {
+    transform: scale(1.05);
+}
+
+/* Card hover effect */
+.cards:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0 15px rgba(57, 255, 20, 0.2);
+}
+
+/* Text and icon area */
+.service-content {
+    text-align: center;
+    padding: 10px 10px 10px;
+}
+
+/* Service icon */
+.service-icon {
+    display: inline-block;
+    color: #39ff14;
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+/* Service title */
+.details {
+    color: #f5f7f5;
+    font-size: 15px;
+    font-weight: 700;
+    margin: 0 0 10px;
+
+}
+
+/* Service description */
+.deat {
+    color: #a4ada5;
+    font-size: 11px;
+    line-height: 1.7;
+    margin: 0;
+}
+
+/* Arrow in bottom-right corner */
+.card-arrow {
+    position: absolute;
+    right: 18px;
+    bottom: 15px;
+    width: 35px;
+    height: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #39ff14;
+    border-radius: 50%;
+    color: #39ff14;
+    text-decoration: none;
+    transition: 0.3s ease;
+}
+
+.card-arrow:hover {
+    color: #050705;
+    background: #39ff14;
+    transform: translateX(3px);
+}
+
+/* Tablet layout */
+@media (max-width: 992px) {
+    .service_grids {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        width: 90%;
+        gap: 20px;
+    }
+}
+
+/* Mobile layout */
+@media (max-width: 576px) {
+    .service_grids {
+        grid-template-columns: 1fr;
+        width: 90%;
+        gap: 20px;
+    }
+
+    .cards img {
+        height: 170px;
+    }
+}
+.feature{
+    display: flex;
+    padding: 20px 15px  20px;
+    border: 1px solid #244326;
+}
+.feat{
+    width: 14vw;
+    overflow: hidden;
+    height: 200px;
+    padding: 10px 20px;
+    
+}
+.features_service{
+    padding: 10px 20px;
+    letter-spacing: 2px;
+}
+.h5{
+    font-style: italic;
+    color: var(--green);
+}
+.h1{
+    font-size: 40px;
+    margin-bottom: 10px;
+}
+.more{
+    margin-bottom: 10px;
+    font-size: 20px;
+}
+.words{
+    font-size: 15px;
+    margin-bottom: 10px;
+}
+.book_btn{
+    padding: 20px 20px;
+    margin-top: 30px;
+    background-color: #111;
+    color: #39ff14;
+    border: 1px solid #39ff14;
+    border-radius: 12px;
+    transition: 0.3s ease;
+
+}
+.book_btn:hover{
+    transform: translateY(5px);
+}
+.icon{
+    color: #39ff14;
+}
+.how{
+    font-style: italic;
+    
+}
+.letter{
+    color: var(--grey);
+    margin-bottom: 30px;
+    font-size: 12px;
+}
+.process{
+    padding: 20px 20px ;
+    border: 1px solid #244326;
+    background-image: linear-gradient(
+            to bottom,
+            transparent 10%,
+            rgba(0, 0, 0, 0.95) 100%
+        ),
+            url(lifestyle.png);
+    background-position: center;
+    height: 40vh;
+    margin-bottom: 10px;
+  
+
+  
+
+
+}
+.or{
+    color: #39ff14;
+    font-size: 16px;
+}
+.works{
+    display: flex;
+    gap: 50px;
+  
+    
+}
+.const{
+    padding: 10px 20px ;
+    
+
+}
+.ico{
+    color: #39ff14;
+    font-size: 35px;
+    margin-left: 120px;
+
+}
+.const p {
+    color: var(--grey);
+    font-size: 14px;
+}
+.const h4{
+    display: flex;
+    justify-content: center;
+}
+.final_section{
+    padding: 15px 20px ;
+    display: flex;
+    justify-content: space-between;
+    
+}
+.finl h5{
+    color: var(--green);
+    font-size: 16px;
+}
+.finl h1{
+   color: var(--green); 
+   font-family: 'Orbitron', sans-serif;
+    font-weight: 700;
+    font-style: italic;
+}
+.finl p{
+    color: var(--grey);
+    font-size: 13px;
+}
+.get_quote{
+    font-size: 15px;
+    
+    height: 40px;
+    padding: 20px;
+    
+    margin-top: 30px;
+    color: black;
+    background: var(--green);
+
+}
+.footer{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+   min-height: 100px;
+   padding: 20px 2%;
+   gap: 0%;
+   overflow: hidden;
+   isolation: isolate;
+}
+.rightside{
+    color: var(--green);
+    font-size: 14px;
+    
+}
+.na{
+    
+    color: var(--green);
+    padding: 20px;
+    font-size: 20px;
+    gap: 20%;
+   
+}
+.foot{
+    font-size: 35px;
+    color: var(--green);
+}
+.logos {
+
+    font-family: 'orbitron', sans-serif;
+    font-weight: 700;
+    letter-spacing: 1px;
+    white-space: nowrap;
+    font-size: 25px;
+}
+
+.logos span {
+    color: var(--green);
+    font-size: 36px;
+    margin-right: 6px;
+}
+.service-icon{
+    font-size: 25px;
+}
+
