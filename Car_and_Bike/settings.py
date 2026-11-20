@@ -17,17 +17,18 @@ from dotenv import load_dotenv
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
-load_dotenv(Path(__file__).resolve().parent / ".env")
+load_dotenv(BASE_DIR / ".env", override=True)
+
 
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/6.0/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = os.getenv('django-insecure-m#u@5ffcf47k_z&-=cn2exdy*b$*f29*c4%@q^sik#lh6ns@8=')
+SECRET_KEY = os.environ["SECRET_KEY"]
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = os.environ.get('DEBUG' , 'False') == 'True'
 
 ALLOWED_HOSTS = ["localhost", "127.0.0.1"]
 
