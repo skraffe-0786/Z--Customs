@@ -17,14 +17,14 @@
             <img src="{% static 'logo.jpeg' %}" class="web_logo">
         </a>
         <nav>
-            <a href="http://127.0.0.1:8000">HOME</a>
-            <a href="http://127.0.0.1:8000/services/">SERVICES</a>
-            <a href="">OUR WORK</a>
-            <a href="http://127.0.0.1:8000/About/">ABOUT</a>
-            <a href="http://127.0.0.1:8000/contact/">CONTACT</a>
+            <a href="{% url 'home' %}">Home</a>
+            <a href="{% url 'services' %}">Services</a>
+            <a href="{% url 'ourwork' %}">Our Work</a>
+            <a href="{% url 'about' %}">About</a>
+            <a href="{% url 'contact' %}">Contact</a>
         </nav>
         <i class="bi bi-search" id="serach"></i>
-        <a href="http://127.0.0.1:8000/booknow/" class="btn"> BOOK NOW ↗</a>
+        <a href="{% url 'BookNow'  %}" class="btn"> BOOK NOW ↗</a>
     </header>
 </head>
 

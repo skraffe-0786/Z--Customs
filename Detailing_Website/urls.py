@@ -6,5 +6,6 @@ urlpatterns = [
     path('services/', views.Service_Page, name='services'),
     path('contact/', views.Contact_Page, name='contact'),
     path('booknow/', views.BookNow, name='BookNow'),
-    path('About/', views.About, name='ourwork'),
+    path('About/', views.About, name='about'),
+    path('Ourwork/',views.OurWork, name='ourwork')
 ]

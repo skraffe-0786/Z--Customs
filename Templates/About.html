@@ -22,16 +22,17 @@
         </a>
 
         <nav>
-            <a href="http://127.0.0.1:8000">Home</a>
-            <a href="http://127.0.0.1:8000/services/">Services</a>
-            <a href="">Our Work</a>
-            <a href="http://127.0.0.1:8000/About/">About</a>
-            <a href="http://127.0.0.1:8000/contact/">Contact</a>
+            <a href="{% url 'home' %}">Home</a>
+            <a href="{% url 'services' %}">Services</a>
+            <a href="{% url 'ourwork' %}">Our Work</a>
+            <a href="{% url 'about' %}">About</a>
+            <a href="{% url 'contact' %}">Contact</a>
         </nav>
         <i class="bi bi-search" id="search"></i>
         <button class="book-btn">Book Now ↗</button>
     </header>
 </head>
+
 <body>
     <section class="hero" id="home">
         <div class="hero-content">
@@ -49,7 +50,8 @@
             </p>
 
             <p class="hero-text">
-                At Z Customs, we are  more than  just a garage. we are a community of enthusiests, creators and innovators who live and  breathe cars and bikes 
+                At Z Customs, we are more than just a garage. we are a community of enthusiests, creators and innovators
+                who live and breathe cars and bikes
             </p>
 
             <a href="http://127.0.0.1:8000/Service-Page" class="primary-btn">
@@ -65,10 +67,11 @@
         <div class="our_story">
             <h5>OUR STORY</h5>
             <h1>BUILT FROM PASSION</h1>
-            <p>Z CUSTOMS  waas founded by a group of car & bike enthusiasts
-                with a shared dream - to create a space  where Performance, style and  Quality come together. What started as a small passion project has now grown into a trusted name in  modification and detailing.
+            <p>Z CUSTOMS waas founded by a group of car & bike enthusiasts
+                with a shared dream - to create a space where Performance, style and Quality come together. What started
+                as a small passion project has now grown into a trusted name in modification and detailing.
             </p>
-            <p class="leter">We believe every vehicle has a story, and we're here to  make yours extraordinary.</p>
+            <p class="leter">We believe every vehicle has a story, and we're here to make yours extraordinary.</p>
         </div>
         <div class=""></div>
     </section>
@@ -77,14 +80,14 @@
             <h4>WHY CHOOSE Z CUSTOMS ?</h4>
             <P class="head">QUALITY / EXPERTISE /TRUST</P>
             <P class="text">
-                We use premium product, advance techniques and a skilled  team  to deliver results that
-                exceed expetations. your vehicle is in safe hands with  us.
+                We use premium product, advance techniques and a skilled team to deliver results that
+                exceed expetations. your vehicle is in safe hands with us.
             </P>
-            
+
             <button class="quote_btn">LEARN MORE →</button>
         </div>
         <img src="{% static 'z900.jpg'  %}" class="quote_img">
-       
+
     </section>
     <section class="vision">
         <div class="vis">
@@ -124,4 +127,5 @@
     </section>
 
 </body>
+
 </html>

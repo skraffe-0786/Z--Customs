@@ -111,5 +111,5 @@ def BookNow(request):
 def About(request):
     return render(request, "About.html")
 
-def ourwork(request):
+def OurWork(request):
     return render(request,"OurWork.html")
