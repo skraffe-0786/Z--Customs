@@ -108,8 +108,8 @@ def BookNow(request):
     return render(request, "Booknow.html")
 
 
-def ourwork(request):
-    return render(request, "OurWork.html")
+def About(request):
+    return render(request, "About.html")
 
 def ourwork(request):
     return render(request,"OurWork.html")
