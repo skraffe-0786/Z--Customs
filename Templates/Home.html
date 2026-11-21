@@ -21,7 +21,7 @@
             <img src="{% static 'logo.jpeg' %}" class="web_logo">
         </a>
 
-        <nav>
+        <nav class="nav-links">
             <a href="{% url 'home' %}">Home</a>
             <a href="{% url 'services' %}">Services</a>
             <a href="{% url 'ourwork' %}">Our Work</a>
@@ -29,7 +29,7 @@
             <a href="{% url 'contact' %}">Contact</a>
         </nav>
         <i class="bi bi-search" id="search"></i>
-        <a href="{% url 'BookNow' %} class=" book-btn">Book Now ↗</a>
+        <a href="{% url 'BookNow' %}" class=" book-btn">Book Now ↗</a>
     </header>
 </head>
 
@@ -54,7 +54,7 @@
                 we bring out the true potential of your ride.
             </p>
 
-            <a href="http://127.0.0.1:8000/Service-Page" class="primary-btn">
+            <a href="{% url 'services' %}" class="primary-btn">
                 Explore Our Services →
             </a>
         </div>
@@ -74,10 +74,10 @@
                 <p>Engine,Exhaust,Suspension,aero kits & more</p>
             </div>
             <div class="our">
-                <i class="bi bi-stars service-icon">
-                    <h5>DETAILING</h5>
-                    <P>Polishing, Paint Protection & Deep Cleaning</P>
-                </i>
+                <i class="bi bi-stars service-icon"></i>
+                <h5>DETAILING</h5>
+                <P>Polishing, Paint Protection & Deep Cleaning</P>
+                
             </div>
             <div class="our">
                 <i class="bi bi-gear-wide-connected service-icon"></i>
